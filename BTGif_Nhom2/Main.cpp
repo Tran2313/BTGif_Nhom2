@@ -14,6 +14,10 @@ bool kiemTraSoNguyenTo(int n) {
 	return true;
 }
 
+bool kiemTraNamNhuan(int year) {
+	return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+}
+
 int main() {
 	int choice;
 	do {
@@ -39,6 +43,22 @@ int main() {
 			}
 			break;
 		}
+		case 2:
+		{
+			int year;
+			cout << "Nhap nam: ";
+			cin >> year;
+
+			if (kiemTraNamNhuan(year))
+			{
+				cout << year << " la nam nhuan.\n";
+			} 
+			else 
+			{
+				count << year << "khong phai la nam nhuan.\n";
+			}
+		}
+			break;
 		case 3: 
 			cout << "Thoat chuong trinh.\n";
 			break;
